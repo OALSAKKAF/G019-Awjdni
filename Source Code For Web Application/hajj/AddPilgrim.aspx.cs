@@ -188,7 +188,7 @@ public partial class hajj_AddPilgrim : System.Web.UI.Page
         LblError.ForeColor = Color.Green;
         LblError.Text = "تمت الإضافة بنجاح";
 
-        Response.End();
+        //Response.End();
     }
 
 
