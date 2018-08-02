@@ -1,0 +1,34 @@
+﻿@font-face  {
+	font-family: 'DroidKufi Regular';
+	src: url('fonts/DroidKufi-Regular.ttf');
+}
+@font-face  {
+	font-family: 'DroidKufi Bold';
+	src: url('fonts/DroidKufi-Bold.ttf');
+}
+@font-face  {
+	font-family: 'DroidNaskh Regular';
+	src: url('fonts/DroidNaskh-Regular.ttf');
+}
+@font-face  {
+	font-family: 'DroidNaskh Bold';
+	src: url('fonts/DroidNaskh-Bold.ttf');
+}
+@font-face  {
+	font-family: 'GE_SS_Two_Bold';
+	src: url('fonts/GE_SS_Two_Bold.otf');
+}
+@font-face  {
+	font-family: 'GE_SS_Two_Light';
+	src: url('fonts/GE_SS_Two_Light.ttf');
+}
+@font-face  {
+	font-family: 'Sukar-Black';
+	src: url('fonts/Sukar-Black.ttf');
+}
+@font-face  {
+	font-family: 'Sukar-Bold';
+	src: url('fonts/Sukar-Bold.ttf');
+    font-weight:bold;
+}
+
