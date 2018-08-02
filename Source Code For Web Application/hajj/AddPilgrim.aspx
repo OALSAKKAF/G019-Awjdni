@@ -11,16 +11,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="container">
         <div class="box2">
-            <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                <ContentTemplate>--%>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="box4">إضافة الحجاج</div>
                             <div class="row">
-<%--                               <p style="font-size: 18px; text-decoration: underline;text-align: center;  border: dotted 2px #2C3E50;">قم بتعبئة النماذج بالترتيب الموضح </p>--%>
-
-                                <%--<div class="col-lg-1"></div>--%>
                                 <div class="col-lg-4">
                                     <br />
                                     <br />
@@ -52,7 +46,6 @@
                                         <div class="form-group">
                                                     <label for="TbNATIONALITY" class="control-label">الجنسية</label>
                                                     <asp:DropDownList ID="DdlNATIONALITY" AutoPostBack="false" placeholder="الجنسية" CssClass="form-control center-block text-center" runat="server">
-<%--                                                        <asp:ListItem Selected="True" Value="0">قم بإختيار الجنسية</asp:ListItem>--%>
                                                         <asp:ListItem Value="afghan">Afghan</asp:ListItem>
                                                         <asp:ListItem Value="albanian">Albanian</asp:ListItem>
                                                         <asp:ListItem Value="algerian">Algerian</asp:ListItem>
@@ -280,7 +273,6 @@
                                         <div class="form-group">
                                             <label for="TbBLOOD" class="control-label">فصيلة الدم</label>
                                             <asp:DropDownList ID="DdlBLOOD" CssClass="form-control center-block text-center" runat="server">
-<%--                                                <asp:ListItem Value="0">قم بإختيار فصيلة الدم</asp:ListItem>--%>
                                                 <asp:ListItem Value="A+">فصيلة دم A+</asp:ListItem>
                                                 <asp:ListItem Value="B+">فصيلة دم B+</asp:ListItem>
                                                 <asp:ListItem Value="O+">فصيلة دم O+</asp:ListItem>
@@ -298,11 +290,6 @@
                                             <div class="col-lg-10"><asp:FileUpload ID="FileUpload1" CssClass="form-control pull-right" runat="server" /></div>
                                             <div class="col-lg-2"><asp:Button ID="btnUpload" runat="server" CssClass="btn btn-primary pull-right" Text="تحميل" OnClick="btnUpload_Click" /></div>
                                             </div>
-                                            <%--<asp:RegularExpressionValidator
-                                              id="RegularExpressionValidator1" runat="server"
-                                              ErrorMessage="يجب أن يكون التقرير فقط بإمتداد jpg"
-                                              ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))(.jpg|.JPG|.gif|.GIF)$"
-                                              ControlToValidate="FileUpload1" CssClass="text-red" Display="Dynamic"></asp:RegularExpressionValidator>--%>
                                             <br />
                                             <asp:Label ID="LblUpload" runat="server" Text="" style="font-weight: 700;"></asp:Label>
                                             <asp:Label ID="lbl" runat="server" Text="" style="font-weight: 700;"></asp:Label>
@@ -342,22 +329,18 @@
 
                                     </div>
                                 </div>
-                                <%--<div class="col-lg-1"></div>--%>
                             </div>
-                            <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                            <ContentTemplate>--%>
+                         
                             <div class="form-group">
                                 <br />
                                 <asp:Button ID="BtnAddPilgrim" runat="server" Enabled="false" ValidationGroup="vg" CssClass="btn btn-primary center-block" Text="حفظ البيانات" OnClick="BtnAddPilgrim_Click" />
                                 <br />
                                 <asp:Label ID="LblError" runat="server" ForeColor="Red" CssClass="text-center center-block" Font-Bold="true" Text=""></asp:Label>
                             </div>
-                             <%--</ContentTemplate>
-                            </asp:UpdatePanel>--%>
+                             
                         </div>
                     </div>
-                 <%--</ContentTemplate>
-                </asp:UpdatePanel>--%>
+                
                
         </div>
     </div>

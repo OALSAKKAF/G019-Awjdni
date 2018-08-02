@@ -75,9 +75,9 @@
 }
     .border p {
         font-size: 18px;
-        text-decoration: underline;
+        /*text-decoration: underline;*/
         text-align: center;
-        border: dotted 2px #2C3E50;
+        /*border: dotted 2px #2C3E50;*/
     }
 .font1 {
     font-family: Sukar-Bold;

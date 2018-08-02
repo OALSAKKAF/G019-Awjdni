@@ -83,7 +83,7 @@ public partial class hajj_AddPilgrim : System.Web.UI.Page
             {
                 goto fileExists;
             }
-            
+
 
             //////////////////////////// SAVE QR CODE IMG WITH NAME QRID /////////////////////////////////
             QrId();
@@ -106,7 +106,6 @@ public partial class hajj_AddPilgrim : System.Web.UI.Page
             {
                 LblError.ForeColor = Color.Green;
                 LblError.Text = "تمت الإضافة بنجاح";
-                Response.Write("<script>alert('تمت الإضافة بنجاح')</script>");
 
                 conn.Close();
             }
@@ -114,13 +113,14 @@ public partial class hajj_AddPilgrim : System.Web.UI.Page
             {
                 LblError.ForeColor = Color.Red;
                 LblError.Text = "حدث خطأ لم تتم الإضافة";
-                Response.Write("<script>alert('حدث خطأ لم تتم الإضافة')</script>");
 
             }
-            ///////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////////////////
-            //////////////////////////// SAVE Data Form In medical_rec Table /////////////////////////////////
+            /////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////
+            ////////////////////////// SAVE Data Form In medical_rec Table /////////////////////////////////
             //  
+            MySqlConnection conn1 = new MySqlConnection(connectionString);
+
             int i = 0;
             while (i <= 7)
             {
@@ -128,7 +128,7 @@ public partial class hajj_AddPilgrim : System.Web.UI.Page
                 {
                     string query1 = @"INSERT INTO `medical_rec` (`MRID`, `QRID`, `UID`, `OID`, `UPDATEDATE`, `MRTYPE`, `MRVALUE`)
                             VALUES (NULL, @QRID, @UID, @OID, CURRENT_TIMESTAMP, @MRTYPE, @MRVALUE);";
-                    MySqlCommand cmd1 = new MySqlCommand(query1, conn);
+                    MySqlCommand cmd1 = new MySqlCommand(query1, conn1);
                     cmd1.Parameters.AddWithValue("@QRID", TbQRID.Text);
                     cmd1.Parameters.AddWithValue("@UID", TbUID.Text);
                     cmd1.Parameters.AddWithValue("@OID", TbOID.Text);
@@ -150,14 +150,13 @@ public partial class hajj_AddPilgrim : System.Web.UI.Page
                     if (i == 7)
                         cmd1.Parameters.AddWithValue("@MRVALUE", "أخرى");
 
-                    conn.Open();
+                    conn1.Open();
                     int res1 = cmd1.ExecuteNonQuery();
                     if (res1 == 1)
                     {
                         LblError.ForeColor = Color.Green;
                         LblError.Text = "تمت الإضافة بنجاح";
-                        conn.Close();
-                        
+                        conn1.Close();
                     }
                     else
                     {
@@ -188,7 +187,8 @@ public partial class hajj_AddPilgrim : System.Web.UI.Page
         ///////
         LblError.ForeColor = Color.Green;
         LblError.Text = "تمت الإضافة بنجاح";
-        
+
+        Response.End();
     }
 
 
