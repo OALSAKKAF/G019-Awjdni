@@ -83,7 +83,7 @@
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="يجب كتابة الملاحظة" ControlToValidate="TbTextNote" Display="Dynamic" ForeColor="Red" Style="font-weight: 700" ValidationGroup="vg"></asp:RequiredFieldValidator>
                                     </div>
 
-                                    <div class="form-group">
+                                    <%--<div class="form-group">
                                         <label for="TextNote" class="control-label">الموقع</label>
                                         <div class="row">
                                             <div class="col-lg-4">
@@ -97,7 +97,7 @@
                                             </div>
                                         </div>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="يجب الضغط على زر جلب الإحداثيات" ControlToValidate="TbLatitude" Display="Dynamic" ForeColor="Red" Style="font-weight: 700" ValidationGroup="vg"></asp:RequiredFieldValidator>
-                                    </div>
+                                    </div>--%>
 
                                     <div class="form-group">
                                     </div>
@@ -166,7 +166,7 @@
     </asp:UpdatePanel>
 
     <%-- Script Get Geolocation -- Start --%>
-    <script>
+    <%--<script>
         var x = document.getElementById("demo");
 
         function getLocation() {
@@ -181,7 +181,7 @@
             document.getElementById("<%=TbLatitude.ClientID %>").value = position.coords.latitude;
             document.getElementById("<%=TbLongitude.ClientID %>").value = position.coords.longitude;
         }
-    </script>
+    </script>--%>
     <%-- Script Get Geolocation -- End --%>
 </asp:Content>
 

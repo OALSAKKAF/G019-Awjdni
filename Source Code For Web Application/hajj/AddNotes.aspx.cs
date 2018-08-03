@@ -133,7 +133,7 @@ public partial class hajj_AddNotes : System.Web.UI.Page
             command.Parameters.AddWithValue("@TYPEN", s1);
             //command.Parameters.AddWithValue("@TXTNOTE", Request.Form["TextNote"]);
             command.Parameters.AddWithValue("@TXTNOTE", TbTextNote.Text);
-            string loc = TbLatitude.Text + "," + TbLongitude.Text;
+            string loc = "21.6172743" + "," + "39.1561181";
             command.Parameters.AddWithValue("@LOC", loc);
 
             MySqlDataReader MyReader;
